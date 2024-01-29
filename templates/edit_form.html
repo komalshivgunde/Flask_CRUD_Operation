@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit-Task</title>
+</head>
+<body>
+    <h1 align="center">Edit task</h1>
+    <form method="POST" action="/update/{{d.0}}">
+        <table align="center" border="1">
+            <tr>
+                <td><label for="title">Title:</label></td>
+                <td><input type="text" id="title" name="ctitle" value="{{d.1}}" /></td>
+            </tr>
+            <tr>
+                <td><label for="detail">Details:</label></td>
+                <td><input type="text" id="detail" name="cdetail" value="{{d.2}}"/></td>
+            </tr>
+            <tr>
+                <td><label for="cd">Date:</label></td>
+                <td><input type="date" id="cd" name="cdate" value="{{d.3}}"/></td>
+            </tr>
+            <tr>
+                <td><input type="submit" name="csubmit" value="Update task" /></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

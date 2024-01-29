@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1 align="center">Dashboard</h1>
+    <a href="/create">Create Task</a>
+    <!--{{d}}-->
+    <table border="1" align="center">
+        <tr>
+            <th>Title</th>
+            <th>Detail</th>
+            <th>Date</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        {% for x in d %}
+        <tr>
+            <td>{{x.1}}</td>
+            <td>{{x.2}}</td>
+            <td>{{x.3}}</td>
+            <td>
+                <a href="/edit/{{x.0}}">Edit</a>
+            </td>
+            <td><a href="/delete/{{x.0}}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+</body>
+</html>
